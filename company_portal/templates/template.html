@@ -1,0 +1,18 @@
+<html>
+    <head>
+    </head>
+    <body>
+    {% for detail in details %}
+        <img src="{{detail.company_logo}}" width="100px" height="100px">
+        <h3>Company : <a href="{{detail.company_url}}">{{detail.company}}</a></h3>
+        <h3>Job Title: <a href="{{detail.url}}">{{detail.title}} - {{detail.type}}</a></h3>
+        <h3>Description:</h3>
+        <p>{{detail.description | safe}}</p>
+        <h3>Location:</h3>
+        <p>{{detail.location}}</p>
+        <h3>How to apply:</h3>
+        <p>{{detail.how_to_apply | safe}}</p>
+        <br>
+    {% endfor %}   
+    </body>
+</html>
